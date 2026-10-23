@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BillBana — Free Invoice Generator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+  <header><h1>BillBana</h1><p>Create a clean GST invoice in your browser. Nothing is uploaded — your data stays on this page.</p></header>
+  <section class="card">
+    <div class="grid">
+      <label>Your business name<input id="biz" placeholder="e.g. iSyntaxo"></label>
+      <label>Client name<input id="client" placeholder="e.g. Acme Traders"></label>
+      <label>Invoice number<input id="invno" value="INV-001"></label>
+      <label>Date<input id="invdate" type="date"></label>
+    </div>
+  </section>
+  <section class="card">
+    <table id="items">
+      <thead><tr><th>Item</th><th>Qty</th><th>Rate (₹)</th><th>GST %</th><th>Amount (₹)</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button id="addRow" class="ghost">+ Add item</button>
+    <div class="totals">
+      <div>Subtotal <span id="sub">₹0.00</span></div>
+      <div>GST <span id="tax">₹0.00</span></div>
+      <div class="grand">Total <span id="grand">₹0.00</span></div>
+    </div>
+    <button id="printBtn">Download / Print invoice</button>
+  </section>
+  <footer>BillBana · Built by Shivam Tiwari · Works fully in the browser</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
